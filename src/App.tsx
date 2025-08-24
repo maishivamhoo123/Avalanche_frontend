@@ -17,7 +17,7 @@ import {
   XMarkIcon
 } from "@heroicons/react/24/outline";
 import { SimpleBackground3D } from "./components/Scene3D";
-import { LoadingSpinner, PremiumButton, GlassCard, StatusBadge, MetricCard } from "./components/UIComponents";
+import { LoadingSpinner, PremiumButton, StatusBadge, MetricCard } from "./components/UIComponents";
 import { HeroAnimations } from "./components/HeroAnimations";
 import { CustomCursor, ScrollProgress } from "./components/CustomCursor";
 
@@ -38,27 +38,6 @@ type Listing = {
 };
 
 const BACKEND = "https://avalnche-team1.onrender.com";
-
-interface Credentials {
-  anydeskId: string;
-  anydeskPassword: string;
-  note?: string;
-}
-
-interface PaymentInfo {
-  id: number;
-  timestamp: string;
-  type: string;
-  listingId: number;
-  listingTitle: string;
-  provider: string;
-  flowRate?: string;
-  superToken: string;
-  streamTxHash?: string;
-  sessionTxHash?: string;
-  amount: string;
-  status: string;
-}
 
 export default function App() {
   // Wallet connection hooks

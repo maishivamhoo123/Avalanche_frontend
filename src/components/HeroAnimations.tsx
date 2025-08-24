@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { CpuChipIcon, BoltIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -11,20 +11,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
-  hidden: { y: 50, opacity: 0 },
-  visible: { 
-    y: 0, 
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 10
-    }
-  }
-};
-
-const iconVariants = {
+const iconVariants: Variants = {
   hidden: { scale: 0, rotate: -180 },
   visible: { 
     scale: 1, 
@@ -194,7 +181,7 @@ export function HeroAnimations() {
 }
 
 export function DataStreamAnimation() {
-  const streamVariants = {
+  const streamVariants: Variants = {
     initial: { 
       pathLength: 0,
       opacity: 0 

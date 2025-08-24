@@ -44,9 +44,7 @@ function NetworkLines() {
   const geometry = new THREE.BufferGeometry().setFromPoints(points);
   
   return (
-    <line geometry={geometry}>
-      <lineBasicMaterial color="#00bfa5" linewidth={2} />
-    </line>
+    <primitive object={new THREE.Line(geometry, new THREE.LineBasicMaterial({ color: "#00bfa5" }))} />
   );
 }
 
